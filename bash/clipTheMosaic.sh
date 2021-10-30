@@ -1,0 +1,3 @@
+#! /bin/bash
+
+gdal_translate -of GTiff ../data/u2018_clc2018_v2020_20u1_raster100m/U2018_CLC2018_V2020_20u1.tif -projwin 4966103.085 4169147.394 5417060.331 3922806.076 -projwin_srs EPSG:3035 --config GDAL_CACHEMAX 40000 /vsistdout/ | gdalwarp -s_srs EPSG:3035 -t_srs EPSG:3301 -tr 10 10 -co BIGTIFF=YES -co COMPRESS=LZW -multi -wo NUM_THREADS=25 -overwrite /vsistdin/ ../features/lulc_Corine2018/lulc_10m_ee.tif

@@ -10,7 +10,7 @@ for band in ${bands[@]};
 do
 
 echo ${band};
-find ../data/S2GM_Q10_20200401_20200630_Esti_wgs_2020_summer_STD_v1.3.0_1499060/ -name "${band}*.tiff" >tmpfile.txt;
+find ../data/S2GM_Q10_20200701_20200930_Esti_new_STD_v1.3.0_1500454/ -name "${band}*.tiff" >tmpfile.txt;
 gdalbuildvrt -input_file_list tmpfile.txt ${band}_ee.vrt;
 gdalwarp -r cubic -s_srs EPSG:4326 -t_srs EPSG:3301 -tr 10 10 -of gtiff -co BIGTIFF=YES -co COMPRESS=LZW -multi -wo NUM_THREADS=45 ${band}_ee.vrt ../features/mosaics/${band}_ee.tif
 

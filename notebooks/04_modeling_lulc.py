@@ -14,10 +14,10 @@ warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
-data = pd.read_parquet('../features/testing_data_ee_LULC.parquet')
+data = pd.read_parquet('../features/testing_data_ee_LULC_ortho.parquet')
 print(data.shape)
 
-val_data = pd.read_parquet('../features/training_data_ee_LULC.parquet')
+val_data = pd.read_parquet('../features/training_data_ee_LULC_ortho.parquet')
 print(val_data.shape)
 
 # Constants
@@ -40,8 +40,8 @@ import time
 start_time = time.time()
 params = {
 	'n_estimators':5000,
-    	'eta': 0.1,
-    	'max_depth':6,
+    	'eta': 0.01,
+    	'max_depth':8,
     	'objective':'multi:softmax',
     	'num_class': 8,
 	'subsample': 0.7,
