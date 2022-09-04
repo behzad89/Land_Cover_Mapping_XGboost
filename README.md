@@ -1,4 +1,4 @@
-# Esti-LULC-Map-XGboost
+# Land Cover Mapping using XGboost
 Train a model to produce the Land use and land cover map for Estonia using XGboost
 ![image](https://user-images.githubusercontent.com/47195556/137954536-c3f10773-2b1c-41ba-9419-da59615355ad.png)
 
