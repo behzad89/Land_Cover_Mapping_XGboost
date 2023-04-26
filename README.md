@@ -1,3 +1,4 @@
+[![badge text](https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bvsh/)
 # Land Cover Mapping using XGboost
 Train a model to produce the Land use and land cover map for Estonia using XGboost
 ![image](https://user-images.githubusercontent.com/47195556/137954536-c3f10773-2b1c-41ba-9419-da59615355ad.png)
